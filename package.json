@@ -4,7 +4,9 @@
   "description": "The Big One",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "dev-api": "nodemon -w ./src --exec \"tsc && jest\" -e ts",
+    "start": "node build.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,25 @@
   "bugs": {
     "url": "https://github.com/JLambertazzo/coincoin/issues"
   },
-  "homepage": "https://github.com/JLambertazzo/coincoin#readme"
+  "homepage": "https://github.com/JLambertazzo/coincoin#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongodb": "^4.2.2",
+    "mongoose": "^6.1.4",
+    "typescript": "^4.5.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-typescript": "^7.16.5",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.3",
+    "@types/mongodb": "^4.0.7",
+    "@types/mongoose": "^5.11.97",
+    "babel-jest": "^27.4.5",
+    "jest": "^27.4.5",
+    "nodemon": "^2.0.15",
+    "ts-jest": "^27.1.2",
+    "ts-node": "^10.4.0"
+  }
 }
