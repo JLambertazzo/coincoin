@@ -6,13 +6,15 @@
  * Repository is for accessing outside services (mongodb, 3rd party api, etc)
  */
 import express from 'express'
+import path from 'path'
 const app = express()
 
-// demonstrating jest -- delete this when you have actual functions
-export const sum = (a: number, b: number) => a + b - a + a
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+app.use(express.static(path.join(__dirname, '../client/build')))
 
 app.get('/', (req, res, next) => {
-    res.send('API Online')
+    res.sendFile(path.join(__dirname, '../client/build/index.html'))
 })
 
 const port = process.env.PORT || 5000

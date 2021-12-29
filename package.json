@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "dev-api": "nodemon -w ./src --exec \"tsc && jest\" -e ts",
-    "start": "node build.js"
+    "dev-api": "nodemon -w ./src --exec \"tsc && node build/index.js\" -e ts",
+    "start": "node build/index.js"
   },
   "repository": {
     "type": "git",
