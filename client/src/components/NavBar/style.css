@@ -1,0 +1,32 @@
+.nav {
+    width: 50%;
+    margin: 2rem auto auto;
+}
+
+.nav ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-items: center;
+}
+
+.nav li {
+    font-size: 25px;
+    color: #447099;
+}
+
+.nav li:hover {
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    text-decoration-color: #447099;
+    cursor: pointer;
+}
+
+#current {
+    background-color: #447099;
+    color: white;
+    padding: 5px 2rem;
+    border-radius: 20px;
+    width: fit-content;
+
+}
