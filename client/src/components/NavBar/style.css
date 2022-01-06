@@ -15,6 +15,10 @@
     color: #447099;
 }
 
+.nav a{
+    text-decoration: none;
+}
+
 .nav li:hover {
     text-decoration-style: solid;
     text-decoration-line: underline;
@@ -28,5 +32,6 @@
     padding: 5px 2rem;
     border-radius: 20px;
     width: fit-content;
-
 }
+
+
